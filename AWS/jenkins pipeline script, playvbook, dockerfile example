@@ -1,0 +1,117 @@
+https://naiveskill.com/jenkins-pipeline-github/
+https://www.lambdatest.com/blog/jenkins-declarative-pipeline-examples/
+
+[1] how to perform git operations using pipeline script?
+
+pipeline{
+    agent any
+        stages{
+            stage('build'){
+                steps('cloneing repo'){
+                    git url:'https://github.com/deepika-mdn/Maven', branch: 'master'
+                    sh 'ls -ltrh'
+                    sh 'pwd'
+                    sh 'git log'
+                    sh 'git status'
+                    sh 'git branch --set-upstream-to=origin/master'
+                    sh 'git pull'
+            }
+        }
+    }
+}
+
+
+[2] Create a sample Jenkins CICD pipeline and share output logs and pipeline script
+
+
+pipeline script:-
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
+
+3]ansible yaml file for installing python,git 
+
+- name: Test connectivity to target servers
+  hosts: all
+  tasks:
+     - name: install python
+       apt:
+          name: python
+          state: absent
+
+
+- name: Test connectivity to target servers
+  hosts: all
+  tasks:
+     - name: install git
+       apt:
+          name: git
+          state: present
+
+
+Dockerfile example:
+
+[1] installing python
+
+FROM ubuntu
+
+RUN apt-get -y update
+RUN  apt-get -y install python3
+
+CMD ["echo","hello"]
+
+[2] installing git
+
+FROM ubuntu
+
+RUN apt-get -y update
+RUN  apt-get -y install git or / ngnix
+
+CMD ["echo","hello"]
+
+[3] how to copy files i local to inside docker container
+
+FROM ubuntu
+
+RUN mkdir app
+COPY ./new.txt /app
+
+CMD ["echo","hello"]
+
+[4] add files in local system to inside the container file name hello.java in container saved as hello.class
+
+FROM ubuntu
+
+ADD hello.java hello.class
+RUN apt-get -y update
+
+
+CMD ["echo","hello"]
+~                     
+
+
+
+
+
+
+
+

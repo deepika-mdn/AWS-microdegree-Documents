@@ -1,0 +1,267 @@
+Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand cloud computing platforms
+
+Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing.
+
+2. What is the relation between the Availability Zone and Region?
+AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones are the areas that are present inside the regions. These are generally isolated zones that can replicate themselves whenever required.
+
+aws region
+
+3. What is auto-scaling?
+Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. It allows you to automatically increase or decrease resource capacity in relation to the demand.
+
+
+An Amazon EC2 instance is a virtual server in Amazon's Elastic Compute Cloud (EC2) for running applications on the Amazon Web Services (AWS) infrastructure.
+
+1. Name the three basic types of Cloud Services? 
+Answer: Cloud Services can be mainly classified into three types, namely,
+
+Storage
+Networking
+
+9. Name the available regions in AWS? 
+Answer: The AWS services can be availed across 18 regions across South America, North America, Asia Pacific, and the EU. 
+
+Devops:
+https://www.freecodecamp.org/news/how-to-setup-a-ci-cd-pipeline-with-github-actions-and-aws/
+https://www.blazemeter.com/blog/cicd-pipeline-jenkins-github#ci/cd
+
+
+https://www.interviewbit.com/ci-cd-interview-questions/
+
+https://semaphoreci.com/blog/common-cicd-interview-questions
+
+questions:
+
+What is a CI/CD pipeline?
+ CI/CD is a method to frequently deliver apps to customers by introducing automation into the stages of app development.
+
+What is a CI/CD Engineer?
+CI/CD engineers can improve the integration and operation of CI/CD tools as well as ensure quality end-to-end integration systems.
+
+What is the difference between continuous integration and continuous delivery and continuous deployment?
+Continuous Integration is an approach of testing each change to codebase automatically, whereas Continuous Delivery is an approach to obtain changes of new features, configuration, and bug fixes. On the other hand, Continuous Deployment is an approach to develop software in a short cycle.
+
+whats i HTTPD?
+HTTP Daemon is a software that runs in a background of webservers and waiting for the incoimg sever requests.
+
+The Daemon answers the request automatically and severs the hypertext and multimedia document over the internet using HTTP.
+
+
+What is operating system answer?
+An operating system is a program that acts as an interface between the computer user and computer hardware, and controls the execution of programs.
+
+what is process?
+A process in Linux is nothing but a program in execution. It's a running instance of a program.
+
+what is kernal?
+is the core interface between a computer’s hardware and its processes. It communicates between the 2, managing resources as efficiently as possible.
+
+What the kernel does
+The kernel has 4 jobs:
+
+Memory management: Keep track of how much memory is used to store what, and where
+
+Process management: Determine which processes can use the central processing unit (CPU), when, and for how long
+Device drivers: Act as mediator/interpreter between the hardware and processes
+System calls and security: Receive requests for service from the processes
+
+
+What is the shell in Linux?
+
+A shell is a program that acts as an interface between a user and the kernel
+shell that provides a command line user interface for Unix-like operating systems
+
+what is thread?
+A thread is a lightweight process also called an LWP. A process has its own memory. A thread shares the memory with the parent process and other threads within the process.
+
+A thread is a lightweight process. A process can do more than one unit of work concurrently by creating one or more threads
+
+what is pid?
+On Linux, a “. pid” file is a process identification (PID) file. It is used to store the process ID (PID) of a running process.
+
+how do you acess OS?
+CLI -is a text-based user interface (UI) used to run programs, manage computer files and interact with the computer.
+
+    it takes text based instruction which is understood by kernal to perform a task
+
+GUI-it takes icon based instruction so that its easier to communicate and process become fast
+
+
+Cron and anacron are both used for automating scheduled processes on a Linux-based computer system.
+
+
+Anacron's job is to ensure that your automation jobs are executed on a regular basis
+cron job Cron is a system that helps Linux users to schedule any task. However, a cron job is any defined task to run in a given time period
+
+
+GIT REMOTE add just creates an entry in your git configuring that specifies a name for a particular URL. You must have an existing git report to use this. GIT CLONE creates a new git repository by copying an existing one located at the URL you specify
+
+Nginx is a web server that can also be used as a reverse proxy, load balancer, 
+
+
+https://www.guru99.com/linux-commands-cheat-sheet.html
+
+man command in Linux is used to display the user manual of any command that we can run on the terminal.
+
+change mode
+The chmod (short for change mode) command is used to manage file system access permissions on Unix and Unix-like systems.
+
+chmod +rwx filename to add permissions.
+chmod -rwx directoryname to remove permissions.
+chmod +x filename to allow executable permissions.
+chmod -wx filename to take out write and executable permissions.
+
+Change permission on all the files in a directory recursively. ...
+chmod 777: Everything for everyone. ...
+chmod +x or chmod a+x: Execution for everyone. ...
+chmod 755: Only owner can write, read and execute for everyone.
+
+How to set chmod 700?
+To remove all permissions for group 
+
+What is the meaning of chmod 777?
+The command chmod -R 777 / makes every single file on the system under / (root) have rwxrwxrwx permission
+
+chmod o-rwx foldername
+
+chmod 400 {file_name} Which statements are true about given Command? Gives the user read permission, and removes all other permission. I
+
+
+pipeline {
+  stages {
+    stage("Build") {
+       steps {
+          // Just print a Hello, Pipeline to the console
+          echo "Hello, Pipeline!"
+          // Compile a Java file. This requires JDKconfiguration from Jenkins
+          javac HelloWorld.java
+          // Execute the compiled Java binary called HelloWorld. This requires JDK configuration from Jenkins
+          java HelloWorld
+          // Executes the Apache Maven commands, clean then package. This requires Apache Maven configuration from Jenkins
+          mvn clean package ./HelloPackage
+          // List the files in current directory path by executing a default shell command
+          sh "ls -ltr"
+       }
+   }
+   // And next stages if you want to define further...
+ } // End of stages
+} // End of pipeline
+
+
+Best youtube channel for devops:
+https://www.youtube.com/@DevOps-Cloud
+
+what is chef?
+Chef is a Configuration management DevOps tool that manages the infrastructure by writing code rather than using a manual process so that it can be automated, tested and deployed very easily
+
+jenkins jobs?
+Jenkins Jobs are a given set of tasks that runs sequentially as defined by the user pipeline job,free style project.
+
+what is master and slave?
+the Master distributes the workload and allows us to run different builds on different environments each called a Slave.
+
+what is workspace?
+The workspace directory is where Jenkins builds our project: it contains the source code plus any files generated by the build itself. This workspace is reused for each successive build
+
+what is pem key?
+In the context of Amazon Elastic Compute Cloud (EC2), a .pem file refers to a file format used to store the private key associated with an EC2 instance. The .pem file is also known as a key pair file.
+
+When you launch an EC2 instance, you have the option to associate a key pair with the instance. A key pair consists of a public key and a private key. The public key is stored on the EC2 instance and is used for authentication, while the private key is downloaded to your local machine in the form of a .pem file.
+
+what is jenkins file?
+A Jenkinsfile is a text file that contains the definition of a Jenkins Pipeline
+
+https://ninotronix-com.cdn.ampproject.org/c/s/ninotronix.com/devopsnewblogs/index.php/2023/04/12/top-20-linux-practical-questions-asked-in-interview-2023/?amp=1
+
+Deploy php application using git+ci/cd+apache server
+
+https://www.youtube.com/watch?v=64VkDEiLCY8
+
+How can I associate an ACM SSL/TLS certificate with a Classic, Application, or Network Load Balancer?
+https://repost.aws/knowledge-center/associate-acm-certificate-alb-nlb
+
+Tech with piyush
+https://www.youtube.com/@TechTutorialswithPiyush/videos
+
+How can I add user to server?
+Open the Windows Server Essentials Dashboard. On the navigation bar, click Users. In the Users Tasks pane, click Add a user account.
+
+To add a user to your HTTP server, you need to set up basic authentication. Basic authentication is a simple authentication mechanism built into the HTTP protocol that prompts users to enter a username and password when accessing a protected resource. Here's how you can add a user to your HTTP server:
+
+Create a Password File:
+The first step is to create a password file that will store the usernames and encrypted passwords for the users you want to grant access to. Apache provides a utility called htpasswd to create and manage this file.
+
+Install htpasswd if it's not already available on your system:
+
+sudo yum install -y httpd
+
+Create a Password File:
+The first step is to create a password file that will store the usernames and encrypted passwords for the users you want to grant access to. Apache provides a utility called htpasswd to create and manage this file.
+
+
+
+How to set up tomcat Server?
+https://github.com/yankils/Simple-DevOps-Project/blob/master/Tomcat/tomcat_installation.MD
+
+What are the two types of access in IAM?
+Policies and permissions in IAM - AWS Identity and Access ...
+When you create an IAM user, you can choose to allow console or programmatic access. If console access is allowed, the IAM user can sign in to the console using their sign-in credentials. If programmatic access is allowed, the user can use access keys to work with the CLI or API.
+
+Q: How can you improve security when using load balancers?
+Answer: Elastic Load Balancer associate with Amazon Virtual Private Cloud (VPC) to provide strong network security.
+
+
+What is Auto Scaling types in AWS?
+Autoscaling in Amazon Web Services (AWS) - An Overview ...
+There are four main types of AWS autoscaling: manual scaling, scheduled scaling, dynamic scaling, and predictive scaling.14-Dec-2020
+
+What is Auto Scaling in AWS EC2?
+Instance Auto Scaling - Amazon EC2 Autoscaling - AWS
+Amazon EC2 Auto Scaling helps you maintain application availability and lets you automatically add or remove EC2 instances using scaling policies that you define. Dynamic or predictive scaling policies let you add or remove EC2 instance capacity to service established or real-time demand patterns.
+
+What are the two main components of AWS Auto Scaling?
+There are multiple entities involved in the Autoscaling process in AWS, which are: Load Balancer and AMIs are two main components involved in this process
+
+What is the difference between load balancer and Auto Scaling?
+The goal of auto-scaling is to maintain the performance of the system and to reduce costs by only using the resources that are actually needed. On the other hand, Load Balancer is a device that distributes network or application traffic across multiple servers.
+
+What is RDS and EC2 in AWS?
+AWS — Amazon RDS vs Amazon EC2 Relational Databases ...
+RDS is a highly available relational database. It automatically creates a primary DB instance and replicates the data side by side to a standby instance in a different Availability Zone. With EC2, you have to set up your database for high availability.
+
+DNS?
+domai name system- resolve the hostname to to the machine readble ip address
+
+What is Route 53 used for in AWS?
+What is Amazon Route 53? Amazon Route 53 provides highly available and scalable Domain Name System (DNS), domain name registration, and health-checking web services.
+
+link for route53?
+https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html
+
+roles and responsibity as devops engineer?
+Test, build, design, deployment, and ability to maintain continuous integration and continuous delivery process using tools like Jenkins, maven Git, etc. 
+
+http sever
+https://www.devopsschool.com/blog/top-50-apache-httpd-interview-questions-and-answers/
+
+How can I associate an ACM SSL/TLS certificate with a Classic, Application, or Network Load Balancer?
+
+https://repost.aws/knowledge-center/associate-acm-certificate-alb-nlb
+
+Why should we create VPC?
+With VPC, you can control inbound and outbound access to your resources in your own virtual private network and securely connect your data center to the AWS cloud, as well as VPCs in other AWS accounts.
+Amazon VPC (Virtual Private Cloud) is probably one of the most used and famous services inside the Amazon Web Services suite. The reason is simple: this service is mostly related to the concepts of security in the cloud and access to our data inside a third-party data center, like the ones of Amazon.
+
+What is the difference between user and IAM user?
+When should you use AWS IAM roles vs. users? | TechTarget
+An IAM user is an entity that represents a person or application that interacts with AWS. It has specific credentials and permissions attached to it, like roles, to control access. A user is made up of a name, password for the AWS Management Console and access keys to use with the API or CLI.
+
+What is difference between IAM user and IAM group?
+IAM user groups - AWS Identity and Access Management
+An IAM user group is a collection of IAM users. User groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. For example, you could have a user group called Admins and give that user group typical administrator permissions.
+
+IAM Role:
+An IAM role is a set of permissions that can be assumed by AWS resources or entities. Unlike users or groups, roles are not directly assigned to individuals. Instead, they are assumed by trusted entities, such as AWS services or external applications, to access other AWS resources securely. Roles are often used in scenarios like granting permissions to an EC2 instance or allowing an AWS Lambda function to access specific resources.
+
+

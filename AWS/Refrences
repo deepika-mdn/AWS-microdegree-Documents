@@ -1,0 +1,190 @@
+Resume
+https://docs.google.com/document/d/1-Own_wTTveNIjdp2Pon45cAd11tadh6-z_55h5z8tGA/edit
+
+
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+https://www.qloudx.com/aws-iam-roles-types-use-cases/
+https://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UseCases.html
+https://www.javatpoint.com/aws-iam-roles-use-cases 
+
+
+https://www.hostinger.in/tutorials/linux-commands
+https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
+
+EIP- public static ip address
+
+
+using public EC2 instance configire webserver using EIP
+EIP-static ip address 
+EC2 instance- public ip address dynamic it changes so we are using EIP
+
+   Ec2---Webserver
+   |
+   public IP address
+   |
+   EIP
+
+
+039440218343
+
+039440218343
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+https://www.bluematador.com/learn/aws-cli-cheatsheet
+
+
+aws-20
+Load balancer user-data
+Loadbalancer:
+#!/bin/bash
+sudo yum install httpd -y
+sudo systemctl enable httpd
+sudo echo "<h1> Welcome to SBI online banking </h1>" > /var/www/html/index.html
+sudo systemctl start httpd 
+
+
+IAM-4 class
+ 
+
+First configure user in ec2 machine :
+command : aws configure --profile 'eng1'
+
+
+to assume role by a user:
+
+aws sts assume-role --role-arn  arn:aws:iam::039440218343:role/IAM-S3 --role-session-name s3-access-example --profile eng1
+
+
+export AWS_ACCESS_KEY_ID=AccessKeyId
+export AWS_SECRET_ACCESS_KEY= SecretAccessKey
+export AWS_SESSION_TOKEN=SessionToken
+
+
+EBS-class 24
+https://www.easeus.com/diskmanager/file-system.html
+1  clear
+    2  df -h
+    3  lsblk
+    4  lsblk
+    5  fdisk
+    6  clear
+    7  lsblk
+    8  fdisk /dev/xvdf
+    9  lsblk
+   10  mkfs.ext4 /dev/xvdf1
+   11  mkdir /newvolume
+   12  df -h
+   13  mount /dev/xvdf1 /newvolume
+   14  df -h
+   15  lsblk
+   16  history
+
+
+diskmgmt
+
+
+
+jenkins password
+b1a041a5ffb14ede967a9e3b219e2629
+
+
+ - name: Playbook
+    hosts: localhost
+    tasks:
+
+
+important question
+[1] In aws where docker image stored ?
+ Amazon ECR Elastic container Registry
+
+      - name: Execute command date
+        command: date
+
+
+
+[1] docker installtaion link
+
+https://www.youtube.com/watch?v=1ts5Hpsx6lc&t=101s
+https://stackoverflow.com/questions/51342810/how-to-fix-dial-unix-var-run-docker-sock-connect-permission-denied-when-gro
+
+
+imporatant question for interview
+
+docker file:
+
+diff between ADD and COPY
+-the ADD directive can accept a remote URL for its source argument. The COPY directive, on the other hand, can only accept local files. 
+
+diff between CMD and ENTRY POINT
+
+CMD - The CMD describes the default container parameters or commands. The user can easily override the default command when you use this.
+ENTRYPOINT - A container with an ENTRYPOINT is preferred when you want to define an executable. helps to run the container in background
+
+[1] example:
+hello world -this hello world wants to change to hello world new - this possible in CMD not in Entry point(entry point helps to run docker file in background)
+
+RUN- command used to run any linux commands
+
+
+stateful and stateless difference important for interview
+
+
+stateless-dont store data. vice versa stateful
+
+database in kubernetes- ETCD cluster-no sql database
+ETCD cluster which database ? no sql database -keyvalue pair datastored
+normal database -table format data stored
+
+no sql and rdbms database difference important
+
+REST API methods
+API- application program interface
+
+
+https://youtu.be/HuE-QhrmE1c 
+creating IAM user and acess and secret key
+
+what is cluster?
+more then one node means cluster
+
+ROLLBACK?
+
+Example: 1 ec2 instance Java 1.0.0 running but after sometime issue found rollbacking this version to -> java 1.0.1 and deploing to ec2 machine
+ rollbacking to different version
+
+REPLICA?
+running same image as muliplte docker container.
+        java 1.0.0
+          /  \
+           replica
+
+  running this java 1.0.0 image -> as two images in same ec2 instance
+reason-> if one container down then other one running
+run replica in different ec2 machine if one become down then other one running.
+
+Availablity example => REPLICA
+
+ run two replica in two different regions if one become down then other one running.
+
+vertical and horizontal scaling?
+
+vertical - increasing capacity of ec2 machine (increase memory and cpu utilization) -> example chaneging t2. micro to t2.medium in ec2 istance
+horizontal - increasing no. of ec2 machine
+ 
+how to push docker image into ECR steps
+https://www.google.com/search?q=how+to+push+docker+image+to+ECR&sxsrf=AJOqlzWQr5boHFCPn_r8LRchO3mCO-Fx6w:1679577878763&source=lnms&tbm=vid&sa=X&ved=2ahUKEwjJ-NeWk_L9AhUQwzgGHbVgCsQQ_AUoAXoECAEQAw&biw=1109&bih=604&dpr=1.52#fpstate=ive&vld=cid:a48a6c81,vid:t0TXPCwcg3I
+
+http://cmr.miccai.cloud/docker-submission-tutorial/
+
+jenkins installation
+
+Maheah Kumar M
+sudo apt install default-jdk
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+
+
+

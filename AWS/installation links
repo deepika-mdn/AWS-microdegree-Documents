@@ -1,0 +1,172 @@
+jenkins installation:-
+
+
+https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
+
+$ sudo apt install openjdk-11-jre
+$ sudo apt purge jenkins
+$ sudo apt install jenkins
+apt list --installed | grep openjdk
+
+https://stackoverflow.com/questions/19457867/problems-installing-latest-version-of-jenkins
+https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
+https://www.ktexperts.com/how-to-install-jenkins-on-ubuntu-20-04/
+
+http://65.2.126.246:8080/github-webhook/
+
+
+git token key link:-
+https://bobbyhadz.com/blog/support-for-password-authentication-was-removed-on-august
+
+
+
+git webhook link:-
+https://youtu.be/HZf9mb6WvRI
+http://65.2.126.246:8080/github-webhook/
+
+jenkins master slave concept:
+https://www.google.com/search?q=how+to+configure+jenkins+master+slave+using+ssh+in+aws+ec2+linux&source=lnms&tbm=vid&sa=X&ved=2ahUKEwiEssvryZ_-AhUhS2wGHR3RCeAQ_AUoAXoECAEQAw&biw=1366&bih=638&dpr=1#fpstate=ive&vld=cid:3a0ad168,vid:ucctWFyNFpY
+master: jenkins+java 
+slave: java
+
+to check user in jenkins:
+compgen -u
+excute below command:
+create user 
+sudo adduser jenkins
+su -l jenkins 
+login to the user
+
+
+Setup Jenkins Slave:
+useradd jenkins-slave1
+sudo su - jenkins-slave1
+ssh-keygen -t rsa -N "" -f /home/jenkins-slave1/.ssh/id_rsa
+cd .ssh
+cat id_rsa.pub (Add forward angular bracket here)  authorized_keys
+chmod 700 authorized_keys
+
+Setup Jenkins Master:
+mkdir -p /var/lib/jenkins/.ssh
+cd /var/lib/jenkins/.ssh
+cd ..
+sudo chmod 777 .ssh
+ssh-keyscan -H SLAVE_NODE_IP (Add double forward angular brackets here)  /var/lib/jenkins/.ssh/known_hosts
+cd .ssh
+sudo chown jenkins:jenkins known_hosts
+sudo chmod 700 known_hosts
+
+
+
+
+ansible integrate with jenkins:-
+
+ansible plugin needed in jenkins
+
+ansible-playbook playbook-playtest.yaml
+master- install jenkins + ansible
+slave 
+
+ansible installation command
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+
+master:
+cd /etc/ansible
+ls
+cd hosts
+sudo vi hosts
+[webservers]
+copy public ip of slave machine save
+
+
+ssh-keygen
+copy id_rsa.pub to ALL HOSTS MACHINES --> .ssh/authorized_keys [slave machine]
+
+master
+/var/lib/jenkins/workspace
+vi playbook-playtest.yaml
+- name: Test connectivity to target servers
+  hosts: all
+  tasks:
+     - name: ping test
+       ping:
+
+to run play book : ansible-playbook playbook-playtest.yaml
+
+ansible webservers -m ping => o/p ping-pong
+
+cd /var/lib/jenkins/work-space/
+
+jenkins install ansible plugin, global configuration at end ansible add anisible path 
+
+create one freestyle project =>build steps invoke anisbile with playbook option=>  add /var/lib/jenkins/workspace/demo/test.yaml path 
+add crendentials SSH username and password=>user name=>ubuntu=>copy private key of master and paste=>add => select ubuntu=>save and run the job
+
+master:
+cd /etc/ansible/
+vi ansible.cfg
+[defaults]
+host_key_checking = False
+
+
+Docker installation:
+
+https://phoenixnap.com/kb/install-docker-on-ubuntu-20-04
+
+linux: sudo yum install docker
+
+ubuntu: https://phoenixnap.com/kb/install-docker-on-ubuntu-20-04
+
+Containerize an application:
+https://docs.docker.com/get-started/02_our_app/
+
+https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json: dial unix /var/run/docker.sock: connect: permission denied
+sudo chmod 666 /var/run/docker.sock
+
+
+https://docs.docker.com/get-started/02_our_app/
+
+mkdir Deepika
+cd Deepika
+touch Dockerfile
+vi Dockerfile
+
+# syntax=docker/dockerfile:1
+   
+FROM node:18-alpine
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
+
+docker build -t getting-started .
+
+docker images
+
+docker run -dp 3000:3000 getting-started
+if it is not running in background use this commad
+docker run -it -dp 3000:3000 hello /bin/sh
+
+docker ps
+
+http://localhost:3000/ =>local
+http://publicip of ec2 machine:3000/ =>ec2 machine . security group open 3000 port
+ 
+login to container
+# Use /bin/sh instead of /bin/bash
+docker exec -t -i PUT_CONTAINER_NAME_HERE /bin/sh  OR
+
+docker exec -t -i PUT_CONTAINER_ID_HERE /bin/sh
+
+aftern login its seprate VM 
+
+
+docker swarm master and worke node configuration likns
+
+https://swapnasagarpradhan.medium.com/how-to-install-docker-on-amazon-linux-2-8e5161ac5464
+
+https://forums.docker.com/t/fail-join-node-as-worker/48321

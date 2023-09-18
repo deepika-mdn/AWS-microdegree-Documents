@@ -1,0 +1,193 @@
+1) Which of the following key component of DevOps?
+ans:- All of the above
+
+2) Identify the methodologies does least impact the establishment of DevOps methodology?
+ans:- Waterfall Software Delivery
+
+3) How does DevOps impact security of an application or machine?
+ans:- Both 1 & 2
+
+4) Which of the following is not a feature of continuous delivery ?
+ans:- Gathering Requirement
+
+5) What is the use of Git?
+ans:- Version Control System tool
+
+6) When does testing occur in a DevOps environment?
+ans:- during development and after release
+
+7) What is the use of Jenkins ?
+ans:- Continuous Integration tool
+
+8)  Ansible is a?
+ans:- Configuration Management and Deployment tools
+
+9) DevOps can enable organizations achieve a good release velocity, means that organizations can release code to production often and without any chaotic problems.
+ans:- True
+
+10) How will you find all the changes that were made in a certain commit?
+ans:- git diff-tree –r <commit id>
+
+11) __________ is used to define dependency which is used to package the jar?
+ans:- pom.xml
+
+12) Jenkins can use the __________________ server to authenticate users?
+ans:- Lightweight Directory Access Protocol (LDAP)
+
+13)Git command that you can use to download any repository from GitHub to your own computer?
+ans:- Git Clone
+
+14) What is a core value of DevOps?
+ans:- shortening release cycles
+
+15)  Which of the following statement best describes the goal of DevOps?
+ans:- Establish an environment to release more reliable applications faster
+
+16)  The cloud platform which are not used for DevOps Implementation?
+ans:- IBM
+
+17)  Which of the following is the Popular Scripting Language Of Devops?
+ans:- Python
+
+18) DevOps is an extension of ...............
+ans:- Agile
+
+19)  ........... is a source code management tool.
+ans:- Git
+
+20) Which of the following command is used to access the list of Ansible_Variables?
+ans:- ansible- m setup hostname
+
+21) Which of the following is not a benefit of Automation in DevOps ?
+ans:- mplants Manual Errors  
+
+22) Which of the following best describes open source software?
+
+ans:- All of the above
+
+23) Which of the following components of the Cloudfront service can be used to distribute contents to users across the globe.
+ans:-Amazon Edge locations
+
+24) Your company is planning to host resources in the AWS Cloud. They want to use services which can be used to decouple resources hosted on the cloud. Which of the following services can help fulfil this requirement
+ans:- AWS SQS
+
+25) After you install Git and prior to issuing the first commit, which two configuration properties does the tool expect to be configured?
+ans:- username and email address
+
+26) Process of compiling the entire code base every time the software development 
+team member checks code into the shared source code repository
+ans:- CI
+
+27) Which of the following is not the type of an Http requests
+ans:- OPTION
+
+28) Continuous delivery and continuous deployment both mean the same thing?
+ans:- False
+
+29) Primary objective of DevOps is:
+ans:- is to get the changes into production quickly while minimizing risks in software quality assurance and compliance
+
+30) DevOps and ITIL have nothing in common
+ans:- False
+
+31)  Which of the following phase in maven life cycle performs actions required before integration tests are executed. For example, setting up the required environment?
+ans- pre-integration-test
+
+32) Using which of the following way, you can activate a Maven Build Profile?
+ans:- Both of the above.
+
+33) What is the file format of Terraform code files?
+ans:- YAML
+
+34) Resource names in Terraform are provider specific
+ans:- False
+
+35) Which of the following isn't indicative of anything in the output of terraform plan?
+ans:-  + to show what will be added
+
+
+Task 1
+
+
+git clone git@github.com:deepika-mdn/Example.git
+git checkout -b deepika-dev1
+git branch
+touch Example
+vi Example 
+git add .
+git status
+git commit -m "added Example file to git"
+git pull
+git push --set-upstream origin deepika-dev1
+
+Task2
+
+Mar 28, 2023 8:38:53 AM INFO hudson.WebAppMain contextInitialized
+Jenkins home directory: /var/lib/jenkins found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Mar 28, 2023 8:38:55 AM INFO org.eclipse.jetty.server.handler.ContextHandler doStart
+Started w.@6bff19ff{Jenkins v2.375.3,/,file:///var/cache/jenkins/war/,AVAILABLE}{/var/cache/jenkins/war}
+Mar 28, 2023 8:38:55 AM INFO org.eclipse.jetty.server.AbstractConnector doStart
+Started ServerConnector@4c39bec8{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+Mar 28, 2023 8:38:55 AM INFO org.eclipse.jetty.server.Server doStart
+Started Server@574b560f{STARTING}[10.0.12,sto=0] @42267ms
+Mar 28, 2023 8:38:55 AM INFO winstone.Logger logInternal
+Winstone Servlet Engine running: controlPort=disabled
+Mar 28, 2023 8:38:57 AM INFO jenkins.InitReactorRunner$1 onAttained
+Started initialization
+Mar 28, 2023 8:38:59 AM INFO jenkins.InitReactorRunner$1 onAttained
+Listed all plugins
+Mar 28, 2023 8:39:11 AM INFO jenkins.InitReactorRunner$1 onAttained
+Prepared all plugins
+Mar 28, 2023 8:39:11 AM INFO jenkins.InitReactorRunner$1 onAttained
+Started all plugins
+Mar 28, 2023 8:39:11 AM INFO jenkins.InitReactorRunner$1 onAttained
+Augmented all extensions
+Mar 28, 2023 8:39:12 AM INFO hudson.plugins.build_timeout.global.GlobalTimeOutConfiguration load
+global timeout not set
+Mar 28, 2023 8:39:14 AM INFO jenkins.InitReactorRunner$1 onAttained
+System config loaded
+Mar 28, 2023 8:39:14 AM INFO jenkins.InitReactorRunner$1 onAttained
+System config adapted
+Mar 28, 2023 8:39:15 AM INFO jenkins.InitReactorRunner$1 onAttained
+Loaded all jobs
+Mar 28, 2023 8:39:15 AM INFO jenkins.InitReactorRunner$1 onAttained
+Configuration for all jobs updated
+Mar 28, 2023 8:39:15 AM INFO hudson.util.Retrier start
+Attempt #1 to do the action check updates server
+Mar 28, 2023 8:39:15 AM INFO jenkins.InitReactorRunner$1 onAttained
+Completed initialization
+Mar 28, 2023 8:39:16 AM INFO hudson.lifecycle.Lifecycle onReady
+Jenkins is fully up and running
+Mar 28, 2023 8:39:54 AM INFO hudson.model.DownloadService$Downloadable load
+Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+Mar 28, 2023 8:39:57 AM INFO hudson.model.DownloadService$Downloadable load
+Obtained the updated data file for hudson.plugins.gradle.GradleInstaller
+Mar 28, 2023 8:39:58 AM INFO hudson.model.DownloadService$Downloadable load
+Obtained the updated data file for hudson.tasks.Ant.AntInstaller
+Mar 28, 2023 8:39:58 AM INFO hudson.util.Retrier start
+Performed the action check updates server successfully at the attempt #1
+
+script:-
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
+
+

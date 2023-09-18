@@ -1,0 +1,123 @@
+master
+    1  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    2  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+    3  sudo apt-get update
+    4  sudo apt-get install jenkins
+    5  sudo apt update
+    6  sudo apt install openjdk-11-jre
+    7  java -version
+    8  sudo apt-get install jenkins
+    9  sudo systemctl enable jenkins
+   10  sudo systemctl start jenkins
+   11  sudo systemctl status jenkins
+   12  sudo apt-add-repository ppa:ansible/ansible
+   13  sudo apt update
+   14  sudo apt install ansible
+   15  compgen -u
+   16  cd /var/lib/jenkins
+   17  ls
+   18  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   19  cd .ssh
+   20  ls
+   21  ssh-keygen
+   22  ls
+   23  scp -i id_rsa.pub ubuntu@43.204.23.163:/tmp/
+   24  scp -i id_rsa.pub ~/home/ubuntu/.ssh/id_rsa.pub  ubuntu@43.204.23.163:/tmp/
+   25* 
+   26  cd
+   27  scp -i id_rsa.pub ~/home/ubuntu/.ssh/id_rsa.pub  ubuntu@43.204.23.163:/tmp/
+   28  cd .ssh
+   29  scp -i id_rsa.pub ~/home/ubuntu/.ssh/id_rsa.pub ubuntu@43.204.23.163:/tmp/
+   30  ls
+   31  cd Downloads
+   32  cd downloads
+   33  ls
+   34  cat id_rsa.pub
+   35  scp id_rsa.pub ubuntu@44.204.23.163:/home/ubuntu/.ssh
+   36  scp id_rsa.pub ubuntu@43.204.23.163:/home/ubuntu/.ssh
+   37  cd /var/lib/jenkins/workspace/demo_ansible
+   38  ls
+   39  cd ..
+   40  ls
+   41  cd cd
+   42  cd demo_ansible
+   43  ls
+   44  sudo su 
+   45  cd .ssh
+   46  cd
+   47  cd .ssh
+   48  ls
+   49  cat id_rsa
+   50  cd 
+   51  cd /etc/ansible/
+   52  ls
+   53  vi hosts
+   54  ls -al
+   55  sudo su
+   56  cd ..
+   57  cd
+   58  cd .ssh
+   59  ls
+   60  ls a-l
+   61  ls -al
+   62  chmod777 id_rsa.pub
+   63  chmod 777 id_rsa.pub
+   64  ls -al
+   65  chmod 777 known_hosts
+   66  ls
+   67  ls -al
+   68  cd 
+   69  sudo systemctl restart jenkins.service
+   70  cd 
+   71  chmod 777 .ssh
+   72  sudo systemctl restart jenkins.service
+   73  sudo systemctl restart jenkins
+   74  curl -v telnet://ubuntu@ip-172.31.35.120:22
+   75  cd .ssh
+   76  ssh ubuntu@43.204.23.163 
+   77  cd 
+   78  curl -v telnet://ubuntu@ip-172.31.35.120:22
+   79  curl -v telnet://ubuntu@ip-43.204.23.163 :22
+   80  curl -v telnet://ubuntu@172.31.35.120:22
+   81  sudo systemctl restart jenkins
+   82  cd /etc/ansible
+   83  lls
+   84  ls -al
+   85  cd
+   86  cd /etc/ansible
+   87  ls
+   88  sudo su
+   89  sudo systemctl restart jenkins
+   90  history
+
+
+slave
+
+    1  cd /tmp/
+    2  ls
+    3  ls -al
+    4  cd ..
+    5  cd .ssh
+    6  cd ..
+    7  exit
+    8  cd .ssh
+    9  ls
+   10  vi authorized_keys 
+   11  cd
+   12  ls -al
+   13  cd .ssh
+   14  ls
+   15  cat id_rsa.pub >> authorized_keys
+   16  ls
+   17  ls -al
+   18  cat id_rsa.pub >> authorized_keys
+   19  la -al
+   20  cat  >> authorized_keys
+   21  cat >> authorized_keys
+   22  cat authorized_keys
+   23  cat id_rsa.pub >> authorized_keys
+   24  ls
+   25  cat authorized_keys 
+   26  ls -al
+   27  cd ..
+   28  history

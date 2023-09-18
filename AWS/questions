@@ -1,0 +1,141 @@
+[1] Which of the following statements best describe the AWS Personal Health Dashboard? Select 2
+
+ Ans:-  User-specific view on the availability and performance of AWS services, underlying their AWS resources.
+
+        A service that prompts the user with alerts and notifications on AWS scheduled activities, pending issues, and planned changes.
+
+
+[2] Which of the following can be used as an additional layer of security to using a user name and password when logging into the AWS Console?
+
+ANs: Multi-Factor Authentication (MFA)
+
+3.) Your company is planning to move to the AWS Cloud. You need to give a presentation on the cost perspective when moving existing resources to the AWS Cloud. When it comes to Amazon EC2, which of the following is an advantage when it comes to the cost perspective?
+
+Ans:- The ability to only pay for what you use
+
+4) Your company is planning on moving to the AWS Cloud. Once they move to the Cloud is complete, they want to ensure that the right security settings are put in place. Which of the below tools can assist from Security compliance? Choose any two.
+
+Ans:- AWS Inspector
+      AWS Trusted Advisor
+
+5.)Which of the following statements regarding billing, cost optimization, and cost management in AWS is accurate?
+Ans:- When using Savings Plans, 72% savings can be made on Amazon EC2, AWS Fargate, and AWS Lambda usage.
+
+6.)Which of the following is the responsibility of AWS according to the Shared Security Model? Choose any three.
+Ans:- B) Securing Edge locations
+      C) Monitoring physical locations
+      D) Implementing service organization control (SOC standards)
+
+7.)A weather tracking system is designed for tracking weather conditions of any particular flight route. Flight travellers all over the world make use of this information prior to booking their flights. Travellers expect quick turnaround time in which the weather display & flight booking will happen which is critical to their business. You have designed this website and are using AWS Route 53 DNS. The routing policy that you will apply to this website is
+Ans:- GeoLocation routing policy
+
+8.)A department in an organisation has a stipulated monthly expenditure limit on their AWS account and is anxious about exceeding it. How best can they allay this concern?
+Ans-: In AWS Budgets, creating an email alert based on the budget parameters would suffice.
+
+9.)Which of the following features can be used to preview changes to be made to AWS resource which will be deployed using AWS CloudFormation template?
+Ans:- AWS CloudFormation Change Sets
+
+10.)As per the AWS Acceptable Use Policy, penetration testing of EC2 instances:
+Ans:- Can be performed by the customer, provided they work with the list of services mentioned by AWS.
+
+11.)Which of the following AWS managed database service provides processing power that is up to 5X faster than a traditional MySQL database?
+Ans:- Aurora
+
+12.)Which AWS services can be used to store files? Choose two answers.
+Ans:- Amazon Simple Storage Service (Amazon S3)
+      Amazon Elastic Block Store (Amazon EBS)
+
+13) Why is Amazon DynamoDB service best-suited for implementation in mobile, Internet of Things (IoT) and gaming applications?
+Ans:- DynamoDB has a flexible data model and single-digit millisecond latency
+
+14.)You have a Web application hosted in an EC2 Instance that needs to send notifications based on events. Which of the below services can assist in sending notifications?
+Ans:- AWS SNS
+
+15.)If you wanted to take a backup of an EBS Volume, what would you do?
+Ans:-Create an EBS snapshot
+
+16.)Which services allow the customer to retain full administrative privileges of the underlying virtual infrastructure?
+ans:- Amazon EC2
+
+17.)Which of the following security services can be used to detect users’ personal credit card number from data stored in Amazon S3?
+Ans:- Amazon Macie
+
+18.)Which of the following services helps provide a connection from on-premises infrastructure to resources hosted in the AWS Cloud? Choose any two.
+Ans:- AWS Direct Connect
+      AWS VPN
+
+19.)Which tool can you use to forecast your AWS spending?
+Ans:- AWS Cost Explorer
+
+20)You are working on an e-commerce web application, which is running on an EC2 instance and is experiencing a bad performance in browsing and searching use cases. When heavy load use-cases are running at the same time. The application monitors highlight a bottleneck in the web tier.You decide to re-engineer the application code by decoupling the web tier from the orders heavy workloads.  What AWS service can support the application change?
+Ans:- Amazon SQS
+
+21.)Instances in your private subnet hosted in AWS, need access to important documents in S3. Due to the confidential nature of these documents, you have to ensure that the traffic does not traverse through the internet.As an architect, how would you implement this solution?
+Ans:- Consider using a VPC Endpoint
+
+22.)You have implemented AWS Cognito services to require users to sign in and sign up to your app through social identity providers like Facebook, Google, etc. Your marketing department wants users to try out the app anonymously as they think that the current log-in requirement is excessive and will reduce demand for products and services offered through the app.What would you suggest to the marketing department in this regard?
+Ans:- Cognito Identity supports guest users for the ability to enter the app and have limited access
+
+23.)You work in a large organization. Your team creates AWS resources such as Amazon EC2 dedicated hosts and reserved capacities that need to be shared by other AWS accounts. You need an AWS service to centrally manage these resources so that you can easily specify which accounts or Organizations can access the resources.Which AWS service would you choose to meet this requirement?
+Ans:- Resource Access Manager
+
+24.)You have created REST API using API Gateway. Which of the following mechanism can be used to deny specific IP Address from accessing API Gateway? Choose any two.
+ans:- Resource Policies
+      AWS WAF
+
+25.)A Media firm is saving all its old videos in S3 Glacier Deep Archive. Due to a shortage of new video footage, the channel has decided to reuse all these old videos. Since these are old videos, the channel is not sure of its popularity & response from users. Channel Head wants to make sure that these huge size files do not shoot up their budget & for this as an AWS consultant, you advise them to use S3 intelligent storage class. The Operations Team is concerned for moving these files to S3 Intelligent-Tiering storage class.Which of the following actions can be taken to move objects in Amazon S3 Glacier Deep Archive to S3 Intelligent-Tiering storage class?
+ans:-Use Amazon S3 console to restore objects from S3 Glacier Deep Archive & then copy these objects to required S3 Intelligent-Tiering storage class.
+
+26.)Your Organization is planning to move their on-premise databases to the AWS Cloud, you have been selected to migrate the main productive database and there are some requirements. The production database should remain active during the migration. You need to monitor the progress of the migration. The database is an SQL Server Database you need to find an easy way to convert the actual schemas to MySQL schemas.What services could help to achieve this? Choose any two.
+ans:- AWS Database Migration Service
+      AWS DataSync
+
+27.)You have been asked to create a VPC network topology for your company. The VPC network must support both internet-facing and intranet applications, accessed only over VPN. Both internet-facing and intranet applications must be able to leverage at least 3 AZs for high availability. How many subnets must you create within your VPC to accommodate these requirements?
+ans:- 6
+
+28.)A popular blogging site is planning to save all its data from on-premises to EFS as a redundancy plan. Its on-premises database is constantly updated by the blogging application. You need to ensure that all files saved at EFS using AWS DataSync are validated for data-integrity for each packet.Which of the following will ensure fast transfer for data between on-premise & EFS with data integrity done as per security guidelines?
+ans:- Disable verification during initial file transfers & enable it to post the last data transfer.
+
+29.)A company is developing a web application to be hosted in AWS. This application needs a data store for session data. As an AWS Solution Architect, what would you recommend as an ideal option to store session data? Choose any two.
+ans:- ElastiCache
+      DynamoDB
+
+30.)An application with a 150 GB relational database runs on an EC2 Instance. While the application is used infrequently with small peaks in the morning and evening, which storage type would be the most cost-effective option for the above requirement?
+ans:- Amazon EBS General Purpose SSD
+
+31.)A database, hosted using the Amazon RDS service, is getting a lot of database queries and has now become a bottleneck for the associating application. Which action would ensure that the database is not a performance bottleneck?
+ans:- Setup a CloudFront distribution in front of the database.
+
+32.)An application sends images to S3. The metadata for these images needs to be saved in persistent storage and is required to be indexed. Which one of the following could be used for the underlying metadata storage?
+ans:- Amazon DynamoDB
+
+33.)Your team is developing a high-performance computing (HPC) application. The application resolves complex, compute-intensive problems and needs a high-performance and low-latency Lustre file system. You need to configure this file system in AWS at a low cost.Which method is the most suitable?
+ans:- Create a Lustre file system through Amazon FSx.
+
+34.)There is an application that consists of frontend and backend EC2 Instances behind classic ELBs. The application might not be able to scale properly. What should be used to scale the application appropriately? Choose any two.
+ans:- Replace the Classic ELB with Application ELB.
+      Use Auto Scaling for the backend instances.
+
+35.)A Solutions Architect is designing a highly scalable system to track records. These records must remain available for immediate download for up to three months and then must be deleted. What is the most appropriate decision for this use case?
+ans:- Store the files in Amazon S3 and create a Lifecycle Policy to remove files after 3 months.
+
+36.)You have an application hosted on AWS consisting of EC2 Instances launched via an Auto Scaling Group. You notice that the EC2 Instances are not scaling on demand. Which checks should be done to ensure that the scaling occurs as expected? Choose any two.
+ans:- Check your scaling policies to see whether more than one policy is triggered by an event.
+      Ensure that AutoScaling health checks are being used.
+
+37.)It is expected that only certain specified customers can upload images to the S3 bucket for a certain period of time. What would you suggest as an architect to fulfil this requirement
+ans:- Use pre-signed URLs for uploading the images.
+
+38.)Currently, a company makes use of EBS snapshots to back up their EBS Volumes. As a part of the business continuity requirement, these snapshots need to be made available in another region. How could this be achieved?
+ans:- Create Snapshot and copy the snapshot to a new region.
+
+39.)You need to deploy a machine learning application in AWS EC2. The performance of inter-instance communication is very critical for the application and you want to attach a network device to the instance so that the performance can be greatly improved. Which option is the most appropriate to improve the performance?
+ans:- Attach high-speed Elastic Network Interface (ENI) in the instance.
+
+40.)You are responsible for deploying a critical application to AWS. It is required to ensure that the controls set for this application meet PCI compliance. Also, there is a need to monitor web application logs to identify any malicious activity.Which of the following services could be used to fulfil this requirement? Choose any three.
+ans:- Amazon CloudTrail
+      Amazon CloudWatch Logs
+
+
+
+
