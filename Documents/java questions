@@ -1,0 +1,29 @@
+[1] Oops concept with example to each of them
+[2] method overloading and method overriding with example
+[3] difference between abstraction and polymorphism
+[4] multithreading concept
+[5] Strings in java are immutable? yes there are immutable
+Example : String s1 = "abc"
+          String s2 = "abc"
+          String a3=new String(“XYZ”);
+          if(s1==a2)  # address  comparsion  [true]
+          if(s2.equals(s3)) # value comparision [Flase]
+          
+     Difference between == and =
+     ==  address  comparsion and = value comparision   
+          
+          
+[6] string operations concat etc
+[7] find the lentgh of string program in java [without including white spaces]
+[8] find the largest number program in java
+[9] find the 2nd largest number program in java  
+[10] Access specifier in java        
+
+
+python task
+[1] at top logo in the screen
+[2] top right left corner date and time
+[3] bottom breaking news 
+[4] preloaded video within video
+
+[5] in live streaming object detection
